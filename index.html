@@ -123,13 +123,27 @@
 
     <div style="max-width:780px;">
       <h1 style="font-size:clamp(2.25rem,5vw,3.75rem);line-height:1.08;font-weight:700;letter-spacing:-0.025em;margin-bottom:1.5rem;color:#e8f0f8;">
-        Stop re-typing invoices from Housecall Pro into QuickBooks. <span style="color:#10b981;">Sync runs while you're on the truck.</span>
+        You finish the last job at 6pm then spend an hour re-typing invoices into QuickBooks. <span style="color:#10b981;">HCPSync keeps Housecall Pro and QB Desktop in sync while you are on the truck.</span>
       </h1>
-      <p style="font-size:clamp(1.05rem,2vw,1.2rem);color:#94a8b8;line-height:1.7;max-width:600px;margin-bottom:2.5rem;">
-        Built for 1-5 truck HVAC, plumbing, and electrical shops that are tired of duplicate customers, broken invoices, and the nightly data-entry marathon between Housecall Pro and QuickBooks Desktop.
-      </p>
+
+      <!-- dir-122: Scannable bullets replacing paragraph subheadline -->
+      <ul style="list-style:none;padding:0;margin:0 0 2.5rem;max-width:600px;display:flex;flex-direction:column;gap:0.75rem;">
+        <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:clamp(1.05rem,2vw,1.2rem);color:#94a8b8;line-height:1.6;">
+          <span style="margin-top:0.6rem;width:6px;height:6px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>
+          Automatic sync every 15 minutes between Housecall Pro and QuickBooks Desktop
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:clamp(1.05rem,2vw,1.2rem);color:#94a8b8;line-height:1.6;">
+          <span style="margin-top:0.6rem;width:6px;height:6px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>
+          No more duplicate customers, broken invoices, or missing line items
+        </li>
+        <li style="display:flex;align-items:flex-start;gap:0.75rem;font-size:clamp(1.05rem,2vw,1.2rem);color:#94a8b8;line-height:1.6;">
+          <span style="margin-top:0.6rem;width:6px;height:6px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>
+          Set it up once and never touch the nightly data-entry marathon again
+        </li>
+      </ul>
+
       <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
-        <a href="#waitlist" class="btn-primary">Get Early Access</a>
+        <a href="#waitlist" class="btn-primary">Get Early Access to Automatic HCP-QB Sync</a>
         <a href="#how-it-works" class="btn-ghost">See how it works ↓</a>
       </div>
     </div>
@@ -146,13 +160,26 @@
     </div>
   </section>
 
-  <!-- DASHBOARD MOCKUP -->
+  
+  <!-- dir-122 improvement #3: Founder Credibility -->
+  <section style="max-width:1120px;margin:0 auto;padding:0 2rem 3rem;">
+    <div style="display:flex;align-items:center;gap:1.25rem;padding:1.25rem 1.5rem;border:1px solid #0f1f2e;border-radius:0.5rem;background:rgba(11,23,35,0.5);max-width:600px;">
+      <img src="https://leanaistudio.com/founder.jpeg" alt="Dario Verghi" style="width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid rgba(16,185,129,0.3);" />
+      <div>
+        <p style="margin:0;font-size:1rem;font-weight:700;color:#e8f0f8;font-family:'Space Grotesk',sans-serif;">Built by Dario Verghi</p>
+        <p style="margin:0.2rem 0 0;font-size:0.875rem;color:#10b981;font-weight:600;">Ex-MongoDB Global VP</p>
+        <p style="margin:0.35rem 0 0;font-size:0.85rem;color:#94a8b8;line-height:1.5;">I talked to HVAC and plumbing shop owners doing manual data entry every night after a full day on the truck. HCPSync eliminates that entirely.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- DASHBOARD MOCKUP -->
   <section class="border-line" style="padding:3rem 2rem 5rem;">
     <div style="max-width:1120px;margin:0 auto;">
       <p style="font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#10b981;font-family:'JetBrains Mono',monospace;margin-bottom:1.5rem;text-align:center;">Early preview</p>
 
       <!-- Browser chrome frame -->
-      <div style="max-width:900px;margin:0 auto;border:1px solid #0f1f2e;border-radius:0.75rem;overflow:hidden;background:#0b1723;">
+      <div style="max-width:900px;margin:0 auto;border:1px solid #0f1f2e;border-radius:0.75rem;overflow:hidden;background:#0b1723;position:relative;">
         <!-- Title bar -->
         <div style="display:flex;align-items:center;gap:0.5rem;padding:0.75rem 1rem;background:#0a1420;border-bottom:1px solid #0f1f2e;">
           <div style="display:flex;gap:0.375rem;">
@@ -230,7 +257,12 @@
             </div>
           </div>
         </div>
-      </div>
+      
+        <!-- dir-122 improvement #4: Callout overlays (desktop only) -->
+        <div class="hide-mobile" style="position:absolute;top:160px;right:40px;background:#10b981;color:#070d14;font-size:0.65rem;font-weight:700;padding:0.3rem 0.6rem;border-radius:0.25rem;font-family:'Space Grotesk',sans-serif;white-space:nowrap;box-shadow:0 2px 8px rgba(16,185,129,0.3);">Auto-synced invoices</div>
+        <div class="hide-mobile" style="position:absolute;top:240px;left:220px;background:#10b981;color:#070d14;font-size:0.65rem;font-weight:700;padding:0.3rem 0.6rem;border-radius:0.25rem;font-family:'Space Grotesk',sans-serif;white-space:nowrap;box-shadow:0 2px 8px rgba(16,185,129,0.3);">Customer match rate: 100%</div>
+        <div class="hide-mobile" style="position:absolute;bottom:80px;right:60px;background:#10b981;color:#070d14;font-size:0.65rem;font-weight:700;padding:0.3rem 0.6rem;border-radius:0.25rem;font-family:'Space Grotesk',sans-serif;white-space:nowrap;box-shadow:0 2px 8px rgba(16,185,129,0.3);">Last sync: 4 minutes ago</div>
+</div>
       <p style="text-align:center;font-size:0.8rem;color:#64748b;margin-top:1rem;font-style:italic;">Early preview of the HCPSync dashboard</p>
     </div>
   </section>
@@ -239,9 +271,14 @@
   <section class="border-line" style="padding:5rem 2rem;">
     <div style="max-width:1120px;margin:0 auto;">
       <p style="font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#10b981;font-family:'JetBrains Mono',monospace;margin-bottom:1rem;">The problem</p>
-      <h2 style="font-size:clamp(1.5rem,3vw,2.5rem);font-weight:700;letter-spacing:-0.015em;max-width:660px;margin-bottom:4rem;color:#e8f0f8;">
+      <h2 style="font-size:clamp(1.5rem,3vw,2.5rem);font-weight:700;letter-spacing:-0.015em;max-width:660px;margin-bottom:1.25rem;color:#e8f0f8;">
         HCP and QB Desktop don't talk. You manually copy invoices every night.
       </h2>
+
+      <!-- dir-122 improvement #5: Aggressive pain subparagraph -->
+      <p style="font-size:1.05rem;color:#94a8b8;line-height:1.7;max-width:620px;margin-bottom:4rem;">
+        Housecall Pro runs your dispatch. QuickBooks Desktop runs your books. They don't talk to each other. So every night you sit down and manually copy invoices, match customers, and pray you don't miss a line item. That is not running a business. That is being a data entry clerk.
+      </p>
 
       <div class="grid-auto" style="gap:3rem;">
         <div>
@@ -285,7 +322,7 @@
             </div>
             <span class="mono" style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a8b8;">Step 1</span>
           </div>
-          <h3 style="font-size:1.05rem;font-weight:600;color:#e8f0f8;margin-bottom:0.75rem;">Connect your accounts</h3>
+          <h3 style="font-size:1.05rem;font-weight:600;color:#e8f0f8;margin-bottom:0.75rem;">Connect Housecall Pro and QuickBooks Desktop in one setup</h3>
           <p style="font-size:0.95rem;color:#94a8b8;line-height:1.65;">Link Housecall Pro and QuickBooks Desktop. We handle the QB Desktop SDK — no Connector app to babysit.</p>
         </div>
         <div class="card" style="padding:2rem;">
@@ -297,7 +334,7 @@
             </div>
             <span class="mono" style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a8b8;">Step 2</span>
           </div>
-          <h3 style="font-size:1.05rem;font-weight:600;color:#e8f0f8;margin-bottom:0.75rem;">We match & sync</h3>
+          <h3 style="font-size:1.05rem;font-weight:600;color:#e8f0f8;margin-bottom:0.75rem;">Invoices, customers, and line items sync every 15 minutes automatically</h3>
           <p style="font-size:0.95rem;color:#94a8b8;line-height:1.65;">HCPSync maps customers, invoices, and payments between both systems. Duplicates get flagged and merged automatically.</p>
         </div>
         <div class="card" style="padding:2rem;">
@@ -309,7 +346,7 @@
             </div>
             <span class="mono" style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a8b8;">Step 3</span>
           </div>
-          <h3 style="font-size:1.05rem;font-weight:600;color:#e8f0f8;margin-bottom:0.75rem;">You stay on the truck</h3>
+          <h3 style="font-size:1.05rem;font-weight:600;color:#e8f0f8;margin-bottom:0.75rem;">Stay on the truck knowing your books are always up to date</h3>
           <p style="font-size:0.95rem;color:#94a8b8;line-height:1.65;">Sync runs every 15 minutes. Your QuickBooks stays current without you touching it. Your bookkeeper gets clean data.</p>
         </div>
       </div>
@@ -353,20 +390,22 @@
     <div style="max-width:1120px;margin:0 auto;">
       <div class="grid-2col" style="gap:3rem 5rem;align-items:start;">
         <div>
-          <p style="font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#10b981;font-family:'JetBrains Mono',monospace;margin-bottom:1rem;">Early access · Limited spots</p>
+          <p style="font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#10b981;font-family:'JetBrains Mono',monospace;margin-bottom:1rem;">Early access · Limited founding member spots</p>
           <h2 style="font-size:clamp(1.75rem,3.5vw,2.5rem);font-weight:700;letter-spacing:-0.02em;color:#e8f0f8;margin-bottom:1.25rem;line-height:1.2;">
-            Be among the first to use HCPSync.
+            Stop re-typing invoices every night. Sync runs while you work.
           </h2>
           <p style="font-size:0.95rem;color:#94a8b8;line-height:1.7;max-width:440px;margin-bottom:2rem;">
-            We are onboarding a small group of HVAC, plumbing, and electrical contractors to test HCPSync before full launch. Join the waitlist and you will be the first to know when early access opens.
+            We are onboarding a small group of 1-5 truck HVAC, plumbing, and electrical shops to test HCPSync before full launch.
           </p>
 
-          <div style="display:flex;flex-direction:column;gap:0.875rem;font-size:0.875rem;">
-            <p style="display:flex;align-items:center;gap:0.625rem;color:rgba(232,240,248,0.75);margin:0;"><span style="width:5px;height:5px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>Free during early access</p>
-            <p style="display:flex;align-items:center;gap:0.625rem;color:rgba(232,240,248,0.75);margin:0;"><span style="width:5px;height:5px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>Your feedback shapes the product</p>
-            <p style="display:flex;align-items:center;gap:0.625rem;color:rgba(232,240,248,0.75);margin:0;"><span style="width:5px;height:5px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>No credit card required</p>
-            <p style="display:flex;align-items:center;gap:0.625rem;color:rgba(232,240,248,0.75);margin:0;"><span style="width:5px;height:5px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>First to know when we launch</p>
+          <!-- dir-122: "What you'll get" value prop block -->
+          <p style="font-size:0.875rem;font-weight:600;color:#e8f0f8;margin-bottom:0.75rem;">What you'll get:</p>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;font-size:0.875rem;margin-bottom:1.5rem;">
+            <p style="display:flex;align-items:center;gap:0.625rem;color:rgba(232,240,248,0.75);margin:0;"><span style="width:5px;height:5px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>Automatic 15-minute sync between HCP and QB Desktop</p>
+            <p style="display:flex;align-items:center;gap:0.625rem;color:rgba(232,240,248,0.75);margin:0;"><span style="width:5px;height:5px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>Early access to the field-service accounting sync platform</p>
+            <p style="display:flex;align-items:center;gap:0.625rem;color:rgba(232,240,248,0.75);margin:0;"><span style="width:5px;height:5px;border-radius:50%;background:#10b981;flex-shrink:0;"></span>Priority onboarding and direct access to the founder</p>
           </div>
+          <p style="font-size:0.8rem;color:#10b981;font-weight:600;">Founding users get lifetime priority access.</p>
         </div>
 
         <div>
@@ -410,7 +449,7 @@
               </select>
             </div>
             <button type="submit" id="submit-btn" class="btn-primary" style="width:100%;height:3rem;font-size:1rem;">
-              Get Early Access
+              Get Early Access to Automatic HCP-QB Sync
             </button>
             <p style="font-size:0.75rem;color:rgba(180,210,230,0.65);text-align:center;margin:0;">By signing up you accept our <a href="/privacy.html" style="color:#38bdf8;text-decoration:underline;">Privacy Policy</a> and analytics cookies. No spam — we will only contact you about HCPSync.</p>
 
