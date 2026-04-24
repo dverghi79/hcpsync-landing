@@ -192,6 +192,50 @@
     /* ── Separator ── */
     .sep { width: 100%; height: 1px; background: var(--border); }
 
+    /* AHA MOMENT MORPHING ANIMATION */
+    .aha-wrap{max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 60px rgba(0,0,0,0.5);background:#111113;}
+    .aha-chrome{background:#161618;padding:0.6rem 1rem;display:flex;align-items:center;gap:0.75rem;border-bottom:1px solid var(--border);}
+    .aha-dots span{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px;}
+    .aha-status{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:0.7rem;font-weight:600;padding:0.3rem 0.75rem;border-radius:8px;transition:all 0.6s ease;}
+    .aha-status.pain{background:rgba(239,68,68,0.12);color:#ef4444;}
+    .aha-status.syncing{background:rgba(168,85,247,0.12);color:#a855f7;}
+    .aha-status.done{background:rgba(34,197,94,0.12);color:#22c55e;}
+    .aha-body{padding:1.5rem 1.5rem 1rem;position:relative;}
+    .aha-caption{text-align:center;padding:0.75rem 0 1rem;font-size:1.1rem;font-weight:700;transition:all 0.5s ease;min-height:2.5rem;}
+    .aha-form{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;transition:all 0.8s ease;}
+    .aha-field{padding:0.6rem 0.75rem;border-radius:8px;font-size:0.75rem;font-family:'JetBrains Mono',monospace;transition:all 0.8s ease;position:relative;overflow:hidden;}
+    .aha-field-label{font-size:0.55rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem;transition:color 0.6s ease;}
+    .aha-field-value{font-size:0.8rem;font-weight:500;transition:color 0.6s ease;}
+    .aha-field.full{grid-column:1/-1;}
+    .aha-form.state-pain .aha-field{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.2);}
+    .aha-form.state-pain .aha-field-label{color:rgba(239,68,68,0.6);}
+    .aha-form.state-pain .aha-field-value{color:var(--text-muted);}
+    .aha-form.state-pain .aha-field.has-error{border-color:#ef4444;box-shadow:0 0 0 1px rgba(239,68,68,0.3);}
+    .aha-form.state-pain .aha-field.has-error .aha-field-value{color:#ef4444;text-decoration:line-through;}
+    .aha-form.state-syncing .aha-field{background:rgba(168,85,247,0.05);border:1px solid rgba(168,85,247,0.15);}
+    .aha-form.state-syncing .aha-field-label{color:rgba(168,85,247,0.6);}
+    .aha-form.state-syncing .aha-field-value{color:#a855f7;}
+    .aha-form.state-done .aha-field{background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.18);}
+    .aha-form.state-done .aha-field-label{color:rgba(34,197,94,0.6);}
+    .aha-form.state-done .aha-field-value{color:var(--text-primary);}
+    .aha-form.state-done .aha-field.has-error{border-color:rgba(34,197,94,0.18);box-shadow:none;}
+    .aha-form.state-done .aha-field.has-error .aha-field-value{color:var(--text-primary);text-decoration:none;}
+    .aha-scan{height:2px;background:transparent;margin:0.75rem 0 0;border-radius:2px;overflow:hidden;position:relative;}
+    .aha-scan-bar{position:absolute;top:0;left:0;width:0;height:100%;border-radius:2px;transition:width 1.2s ease-in-out;}
+    .aha-timer-strip{display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-top:0.75rem;padding:0.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.75rem;transition:all 0.5s ease;min-height:2rem;}
+    @media (max-width:600px){.aha-form{grid-template-columns:1fr;}}
+    .closer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:900px;margin:0 auto;}
+    .closer-card{border-radius:16px;padding:2rem 1.75rem;}
+    .closer-card-old{background:rgba(239,68,68,0.03);border:1px solid rgba(239,68,68,0.12);}
+    .closer-card-new{background:rgba(34,197,94,0.03);border:1px solid rgba(34,197,94,0.15);}
+    .closer-label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;font-family:'JetBrains Mono',monospace;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem;}
+    .closer-item{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1.15rem;}
+    .closer-item:last-child{margin-bottom:0;}
+    .closer-icon{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+    .closer-icon-x{background:rgba(239,68,68,0.1);}
+    .closer-icon-check{background:rgba(34,197,94,0.1);}
+    @media (max-width:768px){.closer-grid{grid-template-columns:1fr;gap:1rem;}}
+
     /* ── Founding box ── */
     .founding-box { border: 1px solid rgba(16,185,129,0.2); background: rgba(16,185,129,0.03); border-radius: 16px; padding: 2.5rem; }
 
@@ -470,6 +514,193 @@
           </div>
           <div class="stat-number" style="margin-bottom:0.4rem;"><span class="counter" data-target="5" data-suffix=" pending">0</span></div>
           <p style="font-size:0.9rem;color:var(--text-muted);margin:0;">Follow-ups flagged</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       AHA MOMENT — Provider Credentialing State Change
+       ═══════════════════════════════════════════ -->
+  <section style="padding:4rem 0 5rem;">
+    <div class="container">
+      <p class="section-label reveal">The Aha Moment</p>
+      <h2 class="section-title reveal" style="margin-bottom:3rem;text-align:center;">
+        Watch your <span class="gradient-text">provider roster transform</span> from risky to compliant.
+      </h2>
+
+      <div class="aha-wrap reveal-scale">
+        <!-- Chrome bar -->
+        <div class="aha-chrome">
+          <div class="aha-dots">
+            <span style="background:#ef4444;"></span>
+            <span style="background:#fbbf24;"></span>
+            <span style="background:#22c55e;"></span>
+          </div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--text-muted);">HCPSync · Provider Verification</div>
+          <div class="aha-status pain" id="aha-badge">LAPSED</div>
+        </div>
+
+        <!-- Body -->
+        <div class="aha-body">
+          <!-- Caption changes state-by-state -->
+          <div class="aha-caption" id="aha-caption">Dr. Chen's license expired 2 weeks ago. Nobody caught it.</div>
+
+          <!-- 6 fields mutate per state -->
+          <div class="aha-form state-pain" id="aha-form">
+            <!-- Medical License -->
+            <div class="aha-field has-error">
+              <div class="aha-field-label">Medical License</div>
+              <div class="aha-field-value" id="field-1">Expired 2 weeks ago — nobody noticed</div>
+            </div>
+            <!-- DEA Registration -->
+            <div class="aha-field has-error">
+              <div class="aha-field-label">DEA Registration</div>
+              <div class="aha-field-value" id="field-2">Renewal paperwork lost in email</div>
+            </div>
+            <!-- Board Certification -->
+            <div class="aha-field">
+              <div class="aha-field-label">Board Cert</div>
+              <div class="aha-field-value" id="field-3">Checked manually last quarter</div>
+            </div>
+            <!-- Payer Enrollment -->
+            <div class="aha-field has-error">
+              <div class="aha-field-label">Payer Enrollment</div>
+              <div class="aha-field-value" id="field-4">Aetna rejected — wrong NPI on file</div>
+            </div>
+            <!-- CAQH Profile -->
+            <div class="aha-field has-error full">
+              <div class="aha-field-label">CAQH Profile</div>
+              <div class="aha-field-value" id="field-5">Updated 6 months ago — attestation expired</div>
+            </div>
+            <!-- Provider Roster -->
+            <div class="aha-field full">
+              <div class="aha-field-label">Provider Roster</div>
+              <div class="aha-field-value" id="field-6">47 providers — who's expiring next?</div>
+            </div>
+          </div>
+
+          <!-- Progress bar (empty → syncing → done) -->
+          <div class="aha-scan">
+            <div class="aha-scan-bar" id="aha-bar" style="background:#ef4444;"></div>
+          </div>
+
+          <!-- Timer/status text -->
+          <div class="aha-timer-strip" id="aha-timer">⏱ Last manual check: 3 months ago</div>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:2rem;font-size:0.9rem;color:var(--text-muted);max-width:700px;margin-left:auto;margin-right:auto;">
+        In 10 seconds, HCPSync verified all licenses, DEA registrations, board certifications, and payer enrollments — then auto-alerted to renewals 90 days out.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LOGICAL CLOSER — Old Way vs New
+       ═══════════════════════════════════════════ -->
+  <section style="padding:4rem 0 5rem;">
+    <div class="container">
+      <p class="section-label reveal">Why HCPSync Wins</p>
+      <h2 class="section-title reveal" style="margin-bottom:3rem;text-align:center;">
+        Stop managing credentials in <span class="gradient-text">spreadsheets.</span>
+      </h2>
+
+      <div class="closer-grid reveal-scale">
+        <!-- Old Way -->
+        <div class="closer-card closer-card-old">
+          <div class="closer-label">
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#ef4444;margin-right:0.5rem;"></span>
+            The Old Way
+          </div>
+
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-x">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.25rem;">Track license expirations in spreadsheets</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">That go stale the day you update them</div>
+            </div>
+          </div>
+
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-x">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.25rem;">Discover expired credentials when payers reject claims</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">After patients are already affected</div>
+            </div>
+          </div>
+
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-x">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.25rem;">Chase providers for renewal docs via email</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">Threads nobody reads, follow-ups that slip</div>
+            </div>
+          </div>
+
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-x">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.25rem;">CAQH attestation lapses because nobody set a reminder</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">Manual process with no safety net</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Way (HCPSync) -->
+        <div class="closer-card closer-card-new">
+          <div class="closer-label">
+            <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:0.5rem;"></span>
+            With HCPSync
+          </div>
+
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.25rem;">Real-time license monitoring with auto-alerts</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">90/60/30 days before expiry — zero surprises</div>
+            </div>
+          </div>
+
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.25rem;">Every payer enrollment verified continuously</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">Catch issues before claims bounce</div>
+            </div>
+          </div>
+
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.25rem;">Providers get automated renewal reminders</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">With pre-filled forms — zero friction</div>
+            </div>
+          </div>
+
+          <div class="closer-item">
+            <div class="closer-icon closer-icon-check">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.25rem;">CAQH auto-attestation keeps profiles current</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);">Zero manual follow-up ever needed</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -991,6 +1222,88 @@
       }
       return false;
     }
+
+    /* ── AHA MOMENT — Provider Credentialing State Machine ── */
+    (function() {
+      var ahaWrap = document.querySelector('.aha-wrap');
+      if (!ahaWrap) return;
+
+      var states = [
+        {
+          badge: 'LAPSED',
+          caption: 'Dr. Chen\'s license expired 2 weeks ago. Nobody caught it.',
+          formClass: 'state-pain',
+          field1: 'Expired 2 weeks ago — nobody noticed',
+          field2: 'Renewal paperwork lost in email',
+          field3: 'Checked manually last quarter',
+          field4: 'Aetna rejected — wrong NPI on file',
+          field5: 'Updated 6 months ago — attestation expired',
+          field6: '47 providers — who\'s expiring next?',
+          timer: '⏱ Last manual check: 3 months ago',
+          barColor: '#ef4444',
+          barWidth: '0%'
+        },
+        {
+          badge: 'VERIFYING',
+          caption: 'HCPSync verifying all licenses, certs, and enrollments…',
+          formClass: 'state-syncing',
+          field1: 'Dr. Sarah Chen · TX Med #M-284731',
+          field2: 'DEA #BC4821547 · Schedule II-V',
+          field3: 'ABIM Internal Med · MOC current',
+          field4: 'Aetna · BCBS · United · Cigna',
+          field5: 'CAQH #14829 · Attested 04/2026',
+          field6: '47 providers · syncing enrollment status',
+          timer: '⟳ Verifying licenses · DEA · boards · payer enrollments…',
+          barColor: '#a855f7',
+          barWidth: '50%'
+        },
+        {
+          badge: 'COMPLIANT',
+          caption: '47 providers verified. Zero lapses. Fully compliant.',
+          formClass: 'state-done',
+          field1: 'Dr. Sarah Chen · TX Med #M-284731 · Valid thru 09/2027',
+          field2: 'DEA #BC4821547 · Schedule II-V · Renewed 01/2026',
+          field3: 'ABIM Internal Med · Certified thru 2028 · MOC current',
+          field4: 'Aetna · BCBS · United · Cigna · all active',
+          field5: 'CAQH #14829 · Attested 04/2026 · all fields current',
+          field6: '47 providers · 0 expired · 3 renewing in 30 days · auto-alerted',
+          timer: '✓ 47 providers · 0 lapses · 3 auto-renewals queued',
+          barColor: '#22c55e',
+          barWidth: '100%'
+        }
+      ];
+
+      var stateIndex = 0;
+      function setState(idx) {
+        var state = states[idx];
+        document.getElementById('aha-badge').textContent = state.badge;
+        document.getElementById('aha-badge').className = 'aha-status ' + (idx === 0 ? 'pain' : idx === 1 ? 'syncing' : 'done');
+        document.getElementById('aha-caption').textContent = state.caption;
+        document.getElementById('aha-form').className = 'aha-form ' + state.formClass;
+        document.getElementById('field-1').textContent = state.field1;
+        document.getElementById('field-2').textContent = state.field2;
+        document.getElementById('field-3').textContent = state.field3;
+        document.getElementById('field-4').textContent = state.field4;
+        document.getElementById('field-5').textContent = state.field5;
+        document.getElementById('field-6').textContent = state.field6;
+        document.getElementById('aha-timer').textContent = state.timer;
+        document.getElementById('aha-bar').style.width = state.barWidth;
+        document.getElementById('aha-bar').style.background = state.barColor;
+      }
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            setState(0);
+            setTimeout(function() { setState(1); }, 3000);
+            setTimeout(function() { setState(2); }, 7500);
+            setTimeout(function() { stateIndex = 0; setState(0); }, 17500);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      observer.observe(ahaWrap);
+    })();
   </script>
 
   <!-- Floating "Book a Call" Badge -->
